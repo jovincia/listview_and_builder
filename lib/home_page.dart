@@ -1,11 +1,12 @@
 import "package:flutter/material.dart";
+import "package:listview_builder/circle.dart";
 import "package:listview_builder/colors.dart";
 import "package:listview_builder/square.dart";
 //import "package:listview_builder/colors.dart";
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
-    final List post = [
+  final List post = [
     'post 1',
     'post 2',
     'post 3',
@@ -15,6 +16,16 @@ class HomePage extends StatelessWidget {
     'post 7',
   ];
 
+  final List stories = [
+    'story 1',
+    'story 2',
+    'story 3',
+    'story 4',
+    'story 5',
+    'story 6',
+    'story 7',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +33,14 @@ class HomePage extends StatelessWidget {
         children: [
           //Instagram stories
 
-          //Instagram posts
+          Expanded(
+            child: ListView.builder(
+                itemCount: stories.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return MyCircle(child: stories[index]);
+                }),
+          ),
 
           //Instagram posts
 
