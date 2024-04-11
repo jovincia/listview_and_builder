@@ -1,8 +1,6 @@
 import "package:flutter/material.dart";
 import "package:listview_builder/circle.dart";
-import "package:listview_builder/colors.dart";
 import "package:listview_builder/square.dart";
-//import "package:listview_builder/colors.dart";
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -33,13 +31,16 @@ class HomePage extends StatelessWidget {
         children: [
           //Instagram stories
 
-          Expanded(
-            child: ListView.builder(
-                itemCount: stories.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return MyCircle(child: stories[index]);
-                }),
+          SizedBox(
+            height: 130,
+            child: Expanded(
+              child: ListView.builder(
+                  itemCount: stories.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return MyCircle(child: stories[index]);
+                  }),
+            ),
           ),
 
           //Instagram posts
