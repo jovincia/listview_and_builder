@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import "package:listview_builder/circle.dart";
+import "package:listview_builder/colors.dart";
 import "package:listview_builder/square.dart";
 
 class HomePage extends StatelessWidget {
@@ -30,17 +31,19 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-        const Text(
+         Text(
+          
           "Made by Dani.",
           style: TextStyle(
-            fontFamily: AutofillHints.addressCity,
+            height: 5,
             fontStyle: FontStyle.italic,
             fontSize: 20,
+            color: MainColors.brown
           ),
          ),
           //Instagram stories
           SizedBox(
-            height: 200,
+            height: 130,
             child: Expanded(
               child: ListView.builder(
                   itemCount: stories.length,
