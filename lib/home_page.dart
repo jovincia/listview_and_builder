@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:google_fonts/google_fonts.dart";
 import "package:listview_builder/circle.dart";
 import "package:listview_builder/square.dart";
 
@@ -29,14 +30,25 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+        const Text(
+          "Made by Dani.",
+          style: TextStyle(
+            fontFamily: AutofillHints.addressCity,
+            fontStyle: FontStyle.italic,
+            fontSize: 20,
+          ),
+         ),
           //Instagram stories
-          Expanded(
-            child: ListView.builder(
-                itemCount: stories.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return MyCircle(child: stories[index]);
-                }),
+          SizedBox(
+            height: 200,
+            child: Expanded(
+              child: ListView.builder(
+                  itemCount: stories.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return MyCircle(child: stories[index]);
+                  }),
+            ),
           ),
 
           //Instagram posts
