@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:google_fonts/google_fonts.dart";
 import "package:listview_builder/circle.dart";
 import "package:listview_builder/colors.dart";
 import "package:listview_builder/square.dart";
