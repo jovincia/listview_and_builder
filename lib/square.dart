@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MySquare extends StatelessWidget {
   final String child;
 
-  MySquare({required this.child});
+  const MySquare({super.key, required this.child});
   @override
   Widget build(BuildContext context) {
     return Padding(

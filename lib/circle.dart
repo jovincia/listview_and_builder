@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MyCircle extends StatelessWidget {
  final String child;
 
-  MyCircle({required this.child} );
+  const MyCircle({super.key, required this.child} );
   @override
   Widget build(BuildContext context) {
     return Padding(
